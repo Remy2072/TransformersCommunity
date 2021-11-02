@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+
+:root {
+    --font-weight: 600;
+    --color1: #f4faff;
+    --color2: #fe4e02;
+    --color3: #1e07a1;
+}
+
+#navbar {
+    background-color: var(--color1) !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar::before {
+    content: '';
+    height: 20px;
+    width: 100%;
+    left: 0;
+    bottom: -20px;
+    position: absolute;
+    background-color: #fff;
+}
+img.navbar-brand {
+    height: 35px;
+}
+
+#nav-item-home {
+    color: var(--color3);
+    font-family: "Spartan", sans-serif;
+    font-weight: var(--font-weight);
+}
+
+#nav-item-over-ons {
+    color: var(--color3);
+    font-family: "Spartan", sans-serif;
+    font-weight: var(--font-weight);
+}
+
+#nav-item-wordt-transformer {
+    color: var(--color3);
+    font-family: "Spartan", sans-serif;
+    font-weight: var(--font-weight);
+}
+
+#nav-item-feed {
+    color: var(--color2);
+    font-family: "Spartan", sans-serif;
+    font-weight: var(--font-weight);
+}
+
+#nav-item-contact {
+    color: var(--color3);
+    font-family: "Spartan", sans-serif;
+    font-weight: var(--font-weight);
+}
+
+#nav-item-login {
+    background-color: var(--color2) !important;
+    padding: 0 25px !important;
+    font-family: "Spartan", sans-serif;
+    font-weight: var(--font-weight);
+}
+
+#nav-item-aanmelden {
+    color: var(--color3);
+    font-family: "Spartan", sans-serif;
+    font-weight: var(--font-weight);
+}
+
+.sticky-sidebar-lesson {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sticky-sidebar-lesson::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.sticky-sidebar-lesson .sandbox {
+    width: 60%;
+    margin: 0 0 40px;
+    float: left;
+}
+
+.sticky-sidebar {
+    background: var(--color1);
+    padding: 20px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 350px;
+    position: sticky;
+    top: 97px; 
+    height: fit-content;
+}
+
+.sticky-sidebar ul {
+    padding-left: 0;
+}
+
+.btun {
+    width: 300px;
+    height: 80px;
+    color: var(--color2);
+    background-color: transparent;
+    border: 3px solid var(--color2);
+    border-radius: 3px;
+    font-family: "Spartan", sans-serif;
+    font-size: 35px;
+}
+
+.topicHr{
+    border: 1.5px solid #000;
+    opacity: 1;
+    border-radius: 2px;
+}
+
+.searchb{
+    margin-top: 20px;
+}
+
+.topics{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.topicHr2{
+    border: 1px solid #000;
+    opacity: 1;
+    border-radius: 2px;
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+    font-size: 15px;
+
+}
+
+.tpa {
+    text-decoration: none;
+    color: #000;
+}
+
+.tpa:hover{
+    color: var(--color2);
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+}
+
+.posts-wrapper {
+    width: 100%;
+    margin-left: 22px;
+    position: relative;
+}
+
+.post-content {
+    background-color: var(--color1);
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 30px 25px;
+}
+
+.post-content:first-of-type {
+    margin-top: 0;
+}
+
+.post-content p {
+    margin: 0;
+    line-height: 25px;
+}
+
+.post-content img {
+    width: 100%;
+    border-radius: 5px;
+    max-height: 350px;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
