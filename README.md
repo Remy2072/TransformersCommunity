@@ -52,6 +52,14 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
 ## Code of Conduct
+=======
+<p align="center"><img src="https://twemoji.maxcdn.com/2/svg/1f4dd.svg" height="64" alt="Project Logo"></p>
+<h3 align="center">Transformers Community</h3>
+<p align="center">Remy Duivesteijn</p>
+
+
+### Mijn site
+
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
@@ -60,5 +68,8 @@ In order to ensure that the Laravel community is welcoming to all, please review
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
+=======
+##### Last edited on: 05/11/2021
+
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
