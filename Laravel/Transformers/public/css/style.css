@@ -16,7 +16,7 @@
 }
 
 #navbar::before {
-    content: '';
+    content: "";
     height: 20px;
     width: 100%;
     left: 0;
@@ -95,7 +95,7 @@ img.navbar-brand {
     border-radius: 10px;
     width: 350px;
     position: sticky;
-    top: 97px; 
+    top: 97px;
     height: fit-content;
 }
 
@@ -114,23 +114,13 @@ img.navbar-brand {
     font-size: 35px;
 }
 
-.topicHr{
-    border: 1.5px solid #000;
-    opacity: 1;
-    border-radius: 2px;
-}
-
-.searchb{
-    margin-top: 20px;
-}
-
-.topics{
+.topics {
     text-align: center;
     font-size: 25px;
     margin-top: 10px;
 }
 
-.topicHr2{
+.topicHr2 {
     border: 1px solid #000;
     opacity: 1;
     border-radius: 2px;
@@ -140,7 +130,6 @@ ul {
     text-decoration: none;
     list-style: none;
     font-size: 15px;
-
 }
 
 .tpa {
@@ -148,7 +137,7 @@ ul {
     color: #000;
 }
 
-.tpa:hover{
+.tpa:hover {
     color: var(--color2);
 }
 
@@ -193,4 +182,3 @@ main {
     object-fit: cover;
     margin-top: 15px;
 }
-

@@ -8,6 +8,7 @@
       <link href="{{ url('/css/style.css') }}" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+      <link rel="icon" href="image/icontc.png" sizes="32x32" />
    </head>
    <body>
       <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light py-3 pe-3">
@@ -40,8 +41,8 @@
                </form>
                @if (Route::has('login'))
                <ul class="nav">
-               <li class="nav-item"><a href="{{ route('register') }}" id="nav-item-aanmelden" class="nav-link link-dark px-2.5">Aanmelden</a></li>
-               <a href="{{ route('login') }}" id="nav-item-login" class="btn btn-primary btn-sm rounded-pill border-0 d-flex align-items-center"><span>Inloggen</span></a>
+                  <li class="nav-item"><a href="{{ route('register') }}" id="nav-item-aanmelden" class="nav-link link-dark px-2.5">Aanmelden</a></li>
+                  <a href="{{ route('login') }}" id="nav-item-login" class="btn btn-primary btn-sm rounded-pill border-0 d-flex align-items-center"><span>Inloggen</span></a>
                </ul>
                @endif
             </div>
@@ -49,45 +50,32 @@
       </nav>
       <main>
          <div class="sticky-sidebar d-flex flex-column align-items-center">
-            <button class="btun">Inloggen</button>
+            <a href="{{ route('login') }}"><button class="btun">Inloggen</button></a>
             <p class="topics">Topics</p>
             <ul>
-               <li><a class="tpa" href="">Topic 1: Hoe beheers je emotie’s</a></li>
+               <li><a class="tpa" href="https://leden.transformers.community/topics/4330952"target="_blank">Topic 1: Nieuw? Start hier!</a></li>
                <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 2: Mentale problemen</a></li>
+               <li><a class="tpa" href="https://leden.transformers.community/topics/5174584"target="_blank">Topic 2: Challenge yourself</a></li>
                <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 3: Woede aanval</a></li>
+               <li><a class="tpa" href="https://leden.transformers.community/topics/4331245"target="_blank">Topic 3: Durf te vragen</a></li>
                <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 4: Bang zijn</a></li>
+               <li><a class="tpa" href="https://leden.transformers.community/topics/4518365"target="_blank">Topic 4: Ervaring delen</a></li>
                <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 5: Wie ben ik!</a></li>
+               <li><a class="tpa" href="https://leden.transformers.community/topics/4428585"target="_blank">Topic 5: Transformers' Stories</a></li>
                <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 6: Hoe ga je om met agressie</a></li>
+               <li><a class="tpa" href="https://leden.transformers.community/topics/4518369"target="_blank">Topic 6: Praktische tips</a></li>
                <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 7: Wie zijn de Transformer</a></li>
-               <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 8: Wat wil je bereiken in het leven</a></li>
-               <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 9: Praten over je problemen</a></li>
-               <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 10: Je mag zijn wie je wilt zijn</a></li>
-               <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 11: Je mag zijn wie je wilt zijn</a></li>
-               <hr class="topicHr2">
-               <li><a class="tpa" href="">Topic 12: Je mag zijn wie je wilt zijn</a></li>
-               <hr class="topicHr2">
-            </ul>  
+            </ul>
          </div>
          <div class="posts-wrapper">
-         @foreach($posts as $post)
-         <div class="post-content">
-            <h2>{{$post->user_id}}</h2>
-            <p>{{$post->content}}</p>
-            <img src="image/arena.jpeg" alt="">
-         </div>
-         @endforeach
+            @foreach($posts as $post)
+            <div class="post-content">
+               <h2>{{$post->user_id}}</h2>
+               <p>{{$post->content}}</p>
+               <img src="image/arena.jpeg" alt="">
+            </div>
+            @endforeach
          </div>
       </main>
-    
    </body>
 </html>
