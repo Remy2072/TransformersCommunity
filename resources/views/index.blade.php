@@ -70,7 +70,7 @@
          <div class="posts-wrapper">
             @foreach($posts as $post)
             <div class="post-content">
-               <h2>{{$post->user_id}}</h2>
+               <h2>{{$post->author->name}}</h2>
                <p>{{$post->content}}</p>
                <img src="image/arena.jpeg" alt="">
             </div>
