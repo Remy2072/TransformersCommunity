@@ -39,18 +39,43 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                </form>
-               @if (Route::has('login'))
-               <ul class="nav">
-                  <li class="nav-item"><a href="{{ route('register') }}" id="nav-item-aanmelden" class="nav-link link-dark px-2.5">Aanmelden</a></li>
-                  <a href="{{ route('login') }}" id="nav-item-login" class="btn btn-primary btn-sm rounded-pill border-0 d-flex align-items-center"><span>Inloggen</span></a>
-               </ul>
-               @endif
+               <div class="d-flex justify-content-end align-items-center">
+                  @if (Route::has('login'))
+                  <div class="d-flex align-items-center">
+                     @auth
+                     @else
+                     @if (Route::has('register'))
+                     <a href="{{ route('register') }}" class="btn c-titles-font c-link-cw"><span style="color: #1e07a1">Aanmelden</span></a>  
+                     @endif
+                     <a href="{{ route('login') }}" class="btn c-titles-font c-imp-button m-2 lg">Login</a>
+                     @endauth
+                  </div>
+                  @endif
+               </div>
+               <!-- Settings Dropdown -->
+               <div class="hidden sm:flex sm:items-center sm:ml-6">
+                  @auth
+                  <!-- Authentication -->
+                  <form method="POST" action="{{ route('logout') }}">
+                     @csrf
+                     <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                        <button class="btn3">{{ __('Log Out') }}</button>
+                     </x-dropdown-link>
+                  </form>
+                  @endauth
+               </div>
             </div>
          </div>
       </nav>
       <main>
          <div class="sticky-sidebar d-flex flex-column align-items-center">
+            @if (Auth::check())
+            <h4>{{Auth::user()->name}}</h4>
+            <a href="/create"><button class="btn2">Maak een Bericht</button></a>
+            @else 
             <a href="{{ route('login') }}"><button class="btun">Inloggen</button></a>
+            @endif
             <p class="topics">Topics</p>
             <ul>
                <li><a class="tpa" href="https://leden.transformers.community/topics/4330952"target="_blank">Topic 1: Nieuw? Start hier!</a></li>
@@ -72,7 +97,7 @@
             <div class="post-content">
                <h2>{{$post->author->name}}</h2>
                <p>{{$post->content}}</p>
-               <img src="image/arena.jpeg" alt="">
+               <img src="{{$post->picture}}"alt="">
             </div>
             @endforeach
          </div>
